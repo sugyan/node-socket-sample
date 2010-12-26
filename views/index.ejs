@@ -1,8 +1,14 @@
 <html>
   <head>
     <title>hoge</title>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">var port = <%= port %>;</script>
+    <script type="text/javascript" src="/js/client.js"></script>
   </head>
   <body>
-    fuga
+    <form action="" onSubmit="return onSubmit();">
+      <input type="text" name="message" id="message" />
+      <input type="submit" />
+    </form>
   </body>
 </html>
