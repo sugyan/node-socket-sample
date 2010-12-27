@@ -1,19 +1,14 @@
 <html>
   <head>
-    <title>hoge</title>
+    <title>editor</title>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">google.load("jquery", "1.4.4");</script>
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <script type="text/javascript">var port = <%= port %>;</script>
-    <script type="text/javascript" src="/js/client.js"></script>
+    <script type="text/javascript" src="/js/editor.js"></script>
     <link href="/css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <form action="" id="form">
-      <input type="text" name="message" id="message" />
-      <input type="submit" />
-    </form>
-    <hr />
-    <dl id="list"></dl>
+    <textarea id="code"></textarea>
   </body>
 </html>

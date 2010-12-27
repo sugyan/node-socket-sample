@@ -1,4 +1,4 @@
-dt {
-    color: #808080;
-    font-size: small;
+textarea#code {
+    width: 500px;
+    height: 200px;
 }

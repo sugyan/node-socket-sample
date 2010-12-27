@@ -10,16 +10,19 @@ app.configure(function(){
 app.set('view engine', 'ejs');
 app.set('view options', { layout: false });
 
-app.get('/', function(req, res) {
-    console.log('/');
-    res.render('index', { locals: { port: port } });
+app.get('/editor', function(req, res) {
+    console.log('/editor');
+    res.render('editor', { locals: { port: port } });
+});
+app.get('/viewer', function(req, res) {
+    console.log('/viewer');
+    res.render('viewer', { locals: { port: port } });
 });
 app.listen(port);
 
 var socket = io.listen(app);
 socket.on('connection', function(client) {
     client.on('message', function(msg) {
-        client.send(msg);
         client.broadcast(msg);
     });
     client.on('disconnect', function() {
