@@ -9,6 +9,7 @@ app.configure(function(){
 });
 app.set('view engine', 'ejs');
 app.set('view options', { layout: false });
+app.set('views', __dirname + '/views');
 
 app.get('/editor', function(req, res) {
     console.log('/editor');
